@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom navbar color */
+        .navbar-custom {
+            background-color: #ffc107; /* Yellow color */
+        }
+        .footer-custom {
+            background-color: #ffc107; /* Yellow color */
+            text-align: center; /* Center align text */
+            padding: 10px 0; /* Add some padding for better visibility */
+            position: fixed; /* Fixed position to stick to bottom */
+            width: 100%; /* Full width */
+            bottom: 0; /* Stick to the bottom */
+            left: 0; /* Align to left */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <a class="navbar-brand" href="http://127.0.0.1:5500/index.html"><i class="fas fa-home"></i>Home</a>
+    </nav>
+    <br>
+    <br>
+    <center>
+    <h2>Humidity Monitoring</h2>
+    <form action="/hum_monitor" method="post">
+        <label for="humidity">Humidity:</label>
+        <input type="number" step="0.1" id="humidity" name="humidity" value="{{ humidity }}" required><br><br>
+        
+        <input type="submit" value="Monitor">
+    </form>
+</center>
+<footer class="footer-custom"><b>
+    AgroSense</b>
+</footer>
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
